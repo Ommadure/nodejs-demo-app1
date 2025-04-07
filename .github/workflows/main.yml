@@ -24,10 +24,10 @@ jobs:
       run: npm test
 
     - name: Build Docker image
-      run: docker build -t yourdockerhubusername/nodejs-app .
+      run: docker build -t ommadure1/nodejs-app .
 
     - name: Login to DockerHub
       run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
     - name: Push to DockerHub
-      run: docker push yourdockerhubusername/nodejs-app
+      run: docker push ommadure1/nodejs-app
